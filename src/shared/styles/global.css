@@ -1,0 +1,9 @@
+/* Connect fonts (url links need be in first lines) */
+@import './fonts';
+
+/* Global imports for UI */
+@import "tailwindcss";
+@plugin "daisyui";
+
+/* Custom DaisyUI themes */
+@import './themes';
