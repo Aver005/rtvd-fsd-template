@@ -3,27 +3,37 @@
     "private": true,
     "version": "0.0.0",
     "type": "module",
-    "scripts": 
-    {
-        "dev": "vite",
+    "scripts": {
+        "dev": "vite --host",
         "build": "tsc -b && vite build",
         "lint": "eslint .",
-        "preview": "vite preview"
+        "lint:fix": "eslint . --fix",
+        "preview": "vite preview",
+        "check": "tsc --noEmit",
+        "openapi": "openapi-generator-cli generate -i src/app/api/openapi.json -g typescript-axios -o src/app/api/generated --skip-validate-spec"
     },
-    "dependencies": 
-    {
-        "@tailwindcss/vite": "^4.1.11",
+    "dependencies": {
+        "@tailwindcss/oxide": "^4.1.18",
+        "@tailwindcss/vite": "^4.1.18",
+        "@tanstack/react-query": "^5.90.12",
+        "axios": "^1.13.2",
+        "clsx": "^2.1.1",
         "daisyui": "^5.0.50",
         "lucide-react": "^0.536.0",
+        "motion": "^12.23.26",
         "react": "^19.1.0",
         "react-dom": "^19.1.0",
+        "react-hook-form": "^7.69.0",
         "react-router": "^7.7.1",
-        "tailwindcss": "^4.1.11",
+        "tailwind-merge": "^3.4.0",
+        "tailwindcss": "^4.1.18",
         "zustand": "^5.0.7"
     },
-    "devDependencies": 
-    {
+    "devDependencies": {
         "@eslint/js": "^9.30.1",
+        "@openapitools/openapi-generator-cli": "^2.26.0",
+        "@rollup/rollup-linux-x64-gnu": "^4.54.0",
+        "@swc/core": "^1.15.7",
         "@types/node": "^24.1.0",
         "@types/react": "^19.1.8",
         "@types/react-dom": "^19.1.6",
@@ -34,6 +44,7 @@
         "globals": "^16.3.0",
         "typescript": "~5.8.3",
         "typescript-eslint": "^8.35.1",
-        "vite": "^7.0.4"
+        "vite": "^7.0.4",
+        "vite-plugin-singlefile": "^2.3.0"
     }
 }
