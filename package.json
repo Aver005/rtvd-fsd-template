@@ -10,7 +10,9 @@
         "lint:fix": "eslint . --fix",
         "preview": "vite preview",
         "check": "tsc --noEmit",
-        "openapi": "openapi-generator-cli generate -i src/app/api/openapi.json -g typescript-axios -o src/app/api/generated --skip-validate-spec"
+        "openapi": "openapi-generator-cli generate -i src/app/api/openapi.json -g typescript-axios -o src/app/api/generated --skip-validate-spec",
+        "dep": "./deploy.bat",
+        "deploy": "./deploy.bat"
     },
     "dependencies": {
         "@tailwindcss/oxide": "^4.1.18",
